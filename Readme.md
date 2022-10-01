@@ -16,13 +16,13 @@ then when you work with data the history will save
     "name": "hellop"
     }
     ==================================================================
-    curl --location --request GET 'http://localhost:8081/' \
-    --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2NDQ2MjEyOCwiZXhwIjoxNjY0NDY1NzI4LCJkYXRhIjpbeyJyb2xlcyI6WyJhZG1pbiIsIm1lbWJlciJdfV19.YrwB4s_pe6Gg9GwwFhVGv3JW7AumivKLGxFudSMNDRM' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{
-    "id": 1,
-    "name": "cat"
-    }'
+	curl --location --request PUT 'http://localhost:8080/post' \
+	--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2NDQ2MjEyOCwiZXhwIjoxNjY0NDY1NzI4LCJkYXRhIjpbeyJyb2xlcyI6WyJhZG1pbiIsIm1lbWJlciJdfV19.YrwB4s_pe6Gg9GwwFhVGv3JW7AumivKLGxFudSMNDRM' \
+	--header 'Content-Type: application/json' \
+	--data-raw '{
+		"id": 2,
+		"name": "asdfasfdsafdasddasasda"
+	}'
     ==================================================================
     PATCH http://localhost:8080/patch
     {
