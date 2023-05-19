@@ -9,7 +9,7 @@ spring:
     password: root
   redis:
     Host: ${REDIS_HOST:localhost}
-    Port: ${REDIS_PORT:localhost}
+    Port: ${REDIS_PORT:6379}
     Password:
     Timeout: 1000ms
     lettuce:

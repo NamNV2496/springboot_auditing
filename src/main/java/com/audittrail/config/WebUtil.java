@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Base64;
 import java.util.LinkedHashMap;
+import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
@@ -17,6 +18,9 @@ public class WebUtil {
 
     public String getToken() throws ParseException {
         String token = request.getHeader("authorization");
+        if (Objects.isNull(token)) {
+            return "system";
+        }
         token = token.substring(7);
         String[] chunks = token.split("\\.");
         Base64.Decoder decoder = Base64.getUrlDecoder();

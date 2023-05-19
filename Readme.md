@@ -10,7 +10,7 @@ in domain please extends `extends AuditTrail<String>`
 then when you work with data the history will save
 
 
-    GET http://localhost:8080/post
+    GET http://localhost:8080/testAuditing
     {
     "id": 2,
     "name": "hellop"
@@ -70,3 +70,20 @@ must use `@Component` and `@PostConstruct` to init
 Now we call use CacheUtils in everywhere
 
 ![img_3.png](img_3.png)
+
+# Fake created_date
+
+use `@PrePersist`, `@PreUpdate`, `@PreRemove` to handler action insert, update, delete
+
+![img_5.png](img_5.png)
+
+    curl --location 'http://localhost:8080/testFakeCreatedDate' \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "name": "testChange created_date"
+    }'
+
+![img_4.png](img_4.png)
+
+
+
