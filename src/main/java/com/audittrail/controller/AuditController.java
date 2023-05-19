@@ -2,6 +2,7 @@ package com.audittrail.controller;
 
 import com.audittrail.domain.ItemTest;
 import com.audittrail.repository.ItemRepository;
+import com.audittrail.utils.CacheUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -28,4 +29,9 @@ public class AuditController {
         return itemTest;
     }
 
+
+    @GetMapping("/testImportStaticClass")
+    public String testImportStaticClass() {
+        return CacheUtils.getRedis();
+    }
 }

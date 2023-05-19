@@ -38,3 +38,35 @@ then when you work with data the history will save
     "name": "asdfasfdsafdasddasasda"
     }'
     ==================================================================
+
+
+
+# how to import a service to static class
+
+## Step 1: define service normally
+
+![img.png](img.png)
+
+
+## Step 2: define import function `setMyConfig`
+
+![img_1.png](img_1.png)
+
+## Step 3: create a static class to import `StaticContextInitializer`
+
+
+must use `@Component` and `@PostConstruct` to init
+
+![img_2.png](img_2.png)
+
+```java
+    @PostConstruct
+    public void init() {
+        CacheUtils.setMyConfig(cacheService);
+    }
+```
+
+
+Now we call use CacheUtils in everywhere
+
+![img_3.png](img_3.png)
