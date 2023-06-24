@@ -86,4 +86,13 @@ use `@PrePersist`, `@PreUpdate`, `@PreRemove` to handler action insert, update, 
 ![img_4.png](img_4.png)
 
 
+    {
+        "createdBy": "system",
+        "creationDate": "1011-11-11",
+        "lastModifiedBy": "system",
+        "lastModifiedDate": "2023-05-19",
+        "id": 3,
+        "name": "testChange created_date"
+    }
 
+the created_date is force to update to `1011-11-11`

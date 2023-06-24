@@ -19,3 +19,11 @@ spring:
         min-idle: 8
         max-wait: 1ms
         time-between-eviction-runs: 9000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
