@@ -7,4 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public interface ItemRepository extends JpaRepository<ItemTest, Long> {
+
 }

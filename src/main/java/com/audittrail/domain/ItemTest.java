@@ -1,12 +1,15 @@
 package com.audittrail.domain;
 
 import com.audittrail.audit.AuditTrail;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +18,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ItemTest")
 public class ItemTest extends AuditTrail<String> {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;

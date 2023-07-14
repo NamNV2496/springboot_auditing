@@ -3,6 +3,7 @@ package com.audittrail.utils;
 import com.audittrail.service.CacheService;
 
 public class CacheUtils {
+
     private static CacheService cacheService;
 
     public static void setMyConfig(CacheService cacheService) {

@@ -1,19 +1,18 @@
 package com.audittrail.config;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import java.util.Base64;
+import java.util.LinkedHashMap;
+import java.util.Objects;
+import javax.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.apache.tomcat.util.json.JSONParser;
 import org.apache.tomcat.util.json.ParseException;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Base64;
-import java.util.LinkedHashMap;
-import java.util.Objects;
-
 @Component
 @RequiredArgsConstructor
 public class WebUtil {
+
     private final HttpServletRequest request;
 
     public String getToken() throws ParseException {
